@@ -5,8 +5,8 @@ int main(){
 
     int k,n,w;
     cin>>k>>n>>w;
-
-    d
+    
+    cout<<k<<n<<w;
 
     return 0;
 }
