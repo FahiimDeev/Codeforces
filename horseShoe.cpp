@@ -1,23 +1,18 @@
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int main() {
-    int cases, count = 0;
-    cin >> cases;
-
-    int storage[cases];
-
-    for (int i = 0; i < cases; i++) {
-        cin >> storage[i];
+    set<int> colors;
+    int color;
+    
+    for (int i = 0; i < 4; ++i) {
+        cin >> color;
+        colors.insert(color);
     }
 
-    for (int i = cases - 2; i >= 0; i--) {
-        if (storage[i] != storage[i+1]) {
-            count++;
-        }
-    }
-    cout << count;
+    cout << 4 - colors.size() << endl;
 
     return 0;
 }
